@@ -32,7 +32,7 @@ display:block;
 
 #text{
 position:absolute;
-bottom:60px;
+bottom:70px;
 width:100%;
 text-align:center;
 font-size:36px;
@@ -43,11 +43,16 @@ color:black;
 #clock{
 position:absolute;
 bottom:10px;
-width:100%;
-text-align:center;
-font-size:26px;
-color:white;
+left:50%;
+transform:translateX(-50%);
+font-size:28px;
+color:#00ffcc;
 font-family:monospace;
+background:rgba(0,0,0,0.6);
+padding:10px 20px;
+border-radius:12px;
+box-shadow:0 0 15px rgba(0,255,200,0.7);
+letter-spacing:2px;
 }
 
 @media(max-width:700px){
@@ -56,6 +61,7 @@ font-size:22px;
 }
 #clock{
 font-size:18px;
+padding:8px 14px;
 }
 }
 

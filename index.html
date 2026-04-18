@@ -32,7 +32,7 @@ display:block;
 
 #text{
 position:absolute;
-bottom:20px;
+bottom:60px;
 width:100%;
 text-align:center;
 font-size:36px;
@@ -40,9 +40,22 @@ font-family:"Brush Script MT", cursive;
 color:black;
 }
 
+#clock{
+position:absolute;
+bottom:10px;
+width:100%;
+text-align:center;
+font-size:26px;
+color:white;
+font-family:monospace;
+}
+
 @media(max-width:700px){
 #text{
 font-size:22px;
+}
+#clock{
+font-size:18px;
 }
 }
 
@@ -55,6 +68,19 @@ font-size:22px;
 <img src="foto.jpg">
 
 <div id="text">Yakuplu Öğrenci Yurdu</div>
+
+<div id="clock"></div>
+
+<script>
+function updateClock(){
+const now = new Date();
+const time = now.toLocaleTimeString('tr-TR');
+document.getElementById("clock").innerHTML = time;
+}
+
+setInterval(updateClock,1000);
+updateClock();
+</script>
 
 </body>
 </html>

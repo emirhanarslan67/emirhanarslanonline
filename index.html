@@ -132,7 +132,16 @@ slides[index].classList.add("active");
 dots[index].classList.add("active-dot");
 }
 
-setInterval(changeSlide, 10000);
+
+function autoSlide(){
+  changeSlide();
+
+  let delay = (index < 6) ? 15000 : 25000;
+
+  setTimeout(autoSlide, delay);
+}
+
+setTimeout(autoSlide, 15000);
 
 // SWIPE (mobil)
 let startX = 0;
